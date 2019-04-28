@@ -63,8 +63,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\AudioController.cs" />
+    <Compile Include="Assets\Scripts\AudioSourcePool.cs" />
+    <Compile Include="Assets\Scripts\AudioStore.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\PlayerPreferences.cs" />
+    <Compile Include="Assets\Scripts\TimerController.cs" />
     <Compile Include="Assets\Scripts\UIOptionsController.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/kamila/Documents/GitHub/LudumDare44-Hackatoshing/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
