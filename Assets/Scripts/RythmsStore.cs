@@ -3,8 +3,23 @@ using System.Collections;
 using System.Collections.Generic;
 
 [CreateAssetMenu()]
-public class RythmsStore : SingletonScriptableObject<RythmsStore>
+public class RythmsStore : ScriptableObject
 {
+    static string PATH = "RythmsStore";
+
+    static RythmsStore m_Instance = null;
+    public static RythmsStore Instance
+    {
+        get
+        {
+            if (!m_Instance) { 
+                m_Instance = Resources.Load<RythmsStore>(PATH);
+            }
+
+            return m_Instance;
+        }
+    }
+
     [SerializeField] List<RythmInfo> m_Rythms;
 
     public RythmInfo GetRythm()
