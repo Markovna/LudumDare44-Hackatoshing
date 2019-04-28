@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\AudioController.cs" />
     <Compile Include="Assets\Scripts\AudioSourcePool.cs" />
     <Compile Include="Assets\Scripts\AudioStore.cs" />
+    <Compile Include="Assets\Scripts\GameAudioSettings.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\PlayerPreferences.cs" />
     <Compile Include="Assets\Scripts\Round.cs" />

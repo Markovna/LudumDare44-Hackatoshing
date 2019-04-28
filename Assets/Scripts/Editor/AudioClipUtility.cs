@@ -6,8 +6,20 @@ using UnityEditor.Animations;
 
 public static class AudioClipUtility
 {
-    [MenuItem("Assets/Add to RythmsStore")]
-    public static void ConvertToRythm()
+
+    [MenuItem("Assets/Add to GameAudioSettings/Rhythms/Level Normal")]
+    public static void ConvertToRythmNormal()
+    {
+        ConvertToRythm(0);
+    }
+
+    [MenuItem("Assets/Add to GameAudioSettings/Rhythms/Level Hard")]
+    public static void ConvertToRythmHard()
+    {
+        ConvertToRythm(1);
+    }
+
+    public static void ConvertToRythm(int _Level)
     {
         var selectedObjects = Selection.objects;
         if (selectedObjects == null || selectedObjects.Length == 0)
@@ -57,60 +69,15 @@ public static class AudioClipUtility
                         //string newPath = ap.Remove(slash + 1, ap.Length - slash - 1) + selectedObjects[c].name + ".asset";
                         //AssetDatabase.CreateAsset(rythm, newPath);
 
-                        EditorUtility.AddToRythmStore(rythm);
+                        EditorUtility.AddToRythmStore(rythm, _Level);
                     }
                 }
             }
         }
 
-        Selection.activeInstanceID = RythmsStore.Instance.GetInstanceID();
+        Selection.activeInstanceID = GameAudioSettings.Instance.GetInstanceID();
 
         AssetDatabase.Refresh();
         AssetDatabase.SaveAssets();
-    }
-
-    [MenuItem("Assets/Convert to clip")]
-    public static void ConvertToClip()
-    {
-        foreach (var obj in Selection.objects)
-        {
-            AudioClip clip = obj as AudioClip;
-            if (clip != null)
-            {
-                for (int i = 0; i < clip.channels; i++)
-                {
-                    AnimationClip animation = new AnimationClip();
-                    List<AnimationEvent> events = new List<AnimationEvent>();
-
-
-                    float[] samples = new float[clip.samples];
-                    clip.GetData(samples, i);
-
-                    bool boom = false;
-                    for (int j = 0; j < samples.Length; j++)
-                    {
-                        float s = samples[j];
-
-                        if (s > .92f && !boom)
-                        {
-                            boom = true;
-
-                            AnimationEvent ev = new AnimationEvent();
-                            ev.stringParameter = "boom";
-                            ev.time = clip.length * (j / (float)samples.Length);
-
-                            events.Add(ev); 
-                        }
-                        else
-                            boom = false;
-                    }
-
-                    AnimationUtility.SetAnimationEvents(animation, events.ToArray());
-
-                    AssetDatabase.CreateAsset(animation, AssetDatabase.GenerateUniqueAssetPath("Assets/animation.anim")); 
-                }
-            }
-
-        }
     }
 }

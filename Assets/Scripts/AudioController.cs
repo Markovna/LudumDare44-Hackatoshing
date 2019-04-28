@@ -7,13 +7,23 @@ public class AudioController : MonoBehaviour
 {
     [SerializeField] AudioSourcePool m_AudioSourcePool;
     [SerializeField] AudioMixerGroup m_Mixer;
-    [SerializeField] AudioStore m_Store;
+
     AudioSource m_Background;
 
-    public void PlayBackground()
+    public void Play(AudioClip _Clip)
+    {
+        AudioSource source = m_AudioSourcePool.GetAudioSource(_Clip.length);
+        source.clip = _Clip;
+        source.outputAudioMixerGroup = m_Mixer;
+        source.loop = false;
+        source.playOnAwake = false;
+        source.Play();
+    }
+
+    public void PlayBackground(AudioClip _Clip)
     {
         m_Background = m_AudioSourcePool.GetAudioSource();
-        m_Background.clip = m_Store.GetRandomBackground();
+        m_Background.clip = _Clip;
         m_Background.outputAudioMixerGroup = m_Mixer;
         m_Background.loop = true;
         m_Background.Play();
@@ -25,14 +35,14 @@ public class AudioController : MonoBehaviour
         m_AudioSourcePool.DestroySource(m_Background);
     }
 
-    public void PlayTick()
-    {
-        AudioClip clip = m_Store.GetHit();
-        AudioSource source = m_AudioSourcePool.GetAudioSource(clip.length);
-        source.clip = clip;
-        source.outputAudioMixerGroup = m_Mixer;
-        source.loop = false;
-        source.playOnAwake = false;
-        source.Play();
-    }
+    //public void PlayTick()
+    //{
+    //    AudioClip clip = m_Store.GetHit();
+    //    AudioSource source = m_AudioSourcePool.GetAudioSource(clip.length);
+    //    source.clip = clip;
+    //    source.outputAudioMixerGroup = m_Mixer;
+    //    source.loop = false;
+    //    source.playOnAwake = false;
+    //    source.Play();
+    //}
 }

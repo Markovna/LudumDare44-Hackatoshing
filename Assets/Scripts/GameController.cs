@@ -27,7 +27,12 @@ public class GameController : MonoBehaviour
 
         m_TimerController.Hide();
 
-        m_Round = new Round(RythmsStore.Instance.GetRythm(), m_AudioController);
+        m_Round = new Round(
+                GameAudioSettings.Instance.GetRythm(PlayerPreferences.DifficultyLevel),
+                GameAudioSettings.Instance.GetBackground(PlayerPreferences.DifficultyLevel),
+                GameAudioSettings.Instance.GetSample(),
+                m_AudioController
+            );
         m_Round.Start();
 
         m_Coninue.gameObject.SetActive(false);
@@ -42,7 +47,12 @@ public class GameController : MonoBehaviour
         m_Animator.Play("Continue");
         m_Animator.Update(0f);
 
-        m_Round = new Round(RythmsStore.Instance.GetRythm(), m_AudioController);
+        m_Round = new Round(
+                GameAudioSettings.Instance.GetRythm(PlayerPreferences.DifficultyLevel),
+                GameAudioSettings.Instance.GetBackground(PlayerPreferences.DifficultyLevel),
+                GameAudioSettings.Instance.GetSample(), 
+                m_AudioController
+                );
         m_Round.Start();
     }
 

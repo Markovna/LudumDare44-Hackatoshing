@@ -4,7 +4,7 @@ using UnityEngine;
 public static class PlayerPreferences
 {
     const string DIFFICULTY_KEY = "DIFFICULTY";
-    const int DIFFICULTY_DEFAULT = 1;
+    const int DIFFICULTY_DEFAULT = 0;
 
     const string GRAPHICS_KEY = "GRAPHICS";
     const int GRAPHICS_DEFAULT = 2;
