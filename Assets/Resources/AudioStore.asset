@@ -17,4 +17,4 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0390c364618364186843bc37aaccbdf3, type: 3}
   - {fileID: 8300000, guid: 160b65133a8fc4975b7fe155089a3bed, type: 3}
   - {fileID: 8300000, guid: 6e095e89007a841cab9eddbd38d1c598, type: 3}
-  m_HitClip: {fileID: 8300000, guid: ab84e6cbbabc24b6a859daafb47b144c, type: 3}
+  m_HitClip: {fileID: 8300000, guid: 41a5e652ddd304e25989a53b289416ff, type: 3}

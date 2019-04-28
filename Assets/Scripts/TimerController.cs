@@ -22,6 +22,16 @@ public class TimerController : MonoBehaviour
         m_Seconds.Hide();
     }
 
+    public void Hide()
+    {
+        m_MinutesShown = false;
+        m_HoursShown = false;
+
+        m_Hours.Reset();
+        m_Minutes.Reset();
+        m_Seconds.Reset();
+    }
+
     public void SetTime(TimeSpan _Time)
     {
         int seconds = _Time.Seconds;

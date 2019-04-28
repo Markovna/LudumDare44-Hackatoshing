@@ -1288,6 +1288,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1109063719 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4665276499702294408, guid: 3784204f635f145e0a98d293f4577266,
+    type: 3}
+  m_PrefabInstance: {fileID: 6185522106410646445}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1501881827 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2853283535081487651, guid: 3784204f635f145e0a98d293f4577266,
+    type: 3}
+  m_PrefabInstance: {fileID: 6185522106410646445}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &1918853565 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 818576588304041274, guid: 3784204f635f145e0a98d293f4577266,
@@ -1478,6 +1490,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game
       objectReference: {fileID: 0}
+    - target: {fileID: 6185522105393230319, guid: 3784204f635f145e0a98d293f4577266,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6185522105393230312, guid: 3784204f635f145e0a98d293f4577266,
+        type: 3}
+      propertyPath: m_Coninue
+      value: 
+      objectReference: {fileID: 1109063719}
+    - target: {fileID: 6185522105393230312, guid: 3784204f635f145e0a98d293f4577266,
+        type: 3}
+      propertyPath: m_Exit
+      value: 
+      objectReference: {fileID: 1501881827}
     - target: {fileID: 6185522105393230315, guid: 3784204f635f145e0a98d293f4577266,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1543,6 +1570,13 @@ PrefabInstance:
       propertyPath: m_Animator
       value: 
       objectReference: {fileID: 1918853565}
+    - target: {fileID: 2876715258955052460, guid: 3784204f635f145e0a98d293f4577266,
+        type: 3}
+      propertyPath: m_Text
+      value: '0
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 6943503948329291348, guid: 3784204f635f145e0a98d293f4577266,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

@@ -12,7 +12,7 @@ public class TimerSection
         [SerializeField] Animator m_Animator;
         [SerializeField] Text m_Text;
 
-        List<string> m_States = new List<string> { "N_Rotate_H_CCW_", "N_Rotate_H_CW_", "N_Splash_" };
+        List<string> m_States = new List<string> { "N_Splash_" };
 
         public void Show(int _Value)
         {
@@ -23,6 +23,11 @@ public class TimerSection
         public void Hide()
         {
             m_Animator.Play(GetRandomAnimation(false));
+        }
+
+        public void Reset()
+        {
+            m_Text.text = "";
         }
 
         string GetRandomAnimation(bool _Open)
@@ -40,6 +45,16 @@ public class TimerSection
         int m_CurrentIndex;
         int m_CurrentValue = -1;
 
+        public void Reset()
+        {
+            foreach (var d in m_Digits)
+            {
+                d.Reset();
+            }
+            m_CurrentIndex = -1;
+            m_CurrentValue = -1;
+        }
+
         public void SetValue(int _Value)
         {
             if (m_CurrentValue == _Value)
@@ -56,10 +71,11 @@ public class TimerSection
 
         public void Hide()
         {
-            if (m_CurrentIndex > 0 && m_CurrentIndex < m_Digits.Count)
+            if (m_CurrentIndex >= 0 && m_CurrentIndex < m_Digits.Count)
             {
                 m_Digits[m_CurrentIndex].Hide();
                 m_CurrentIndex = -1;
+                m_CurrentValue = -1;
             }
         }
     }
@@ -82,6 +98,13 @@ public class TimerSection
     {
         m_LeftDigit.Hide();
         m_RightDigit.Hide();
+        m_Label.gameObject.SetActive(false);
+    }
+
+    public void Reset()
+    {
+        m_LeftDigit.Reset();
+        m_RightDigit.Reset();
         m_Label.gameObject.SetActive(false);
     }
 }
