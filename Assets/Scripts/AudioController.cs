@@ -10,10 +10,6 @@ public class AudioController : MonoBehaviour
     [SerializeField] AudioStore m_Store;
     AudioSource m_Background;
 
-    [SerializeField] float m_HitFrequency;
-
-    float m_LastHit;
-
     public void PlayBackground()
     {
         m_Background = m_AudioSourcePool.GetAudioSource();
@@ -29,7 +25,7 @@ public class AudioController : MonoBehaviour
         m_AudioSourcePool.DestroySource(m_Background);
     }
 
-    public void PlayHit()
+    public void PlayTick()
     {
         AudioClip clip = m_Store.GetHit();
         AudioSource source = m_AudioSourcePool.GetAudioSource(clip.length);
