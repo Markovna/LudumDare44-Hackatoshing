@@ -70,7 +70,6 @@
     <Compile Include="Assets\Scripts\PlayerPreferences.cs" />
     <Compile Include="Assets\Scripts\RythmInfo.cs" />
     <Compile Include="Assets\Scripts\RythmsStore.cs" />
-    <Compile Include="Assets\Scripts\SingletonScriptableObject.cs" />
     <Compile Include="Assets\Scripts\TimerController.cs" />
     <Compile Include="Assets\Scripts\UIOptionsController.cs" />
     <Reference Include="Unity.Timeline.Editor">
