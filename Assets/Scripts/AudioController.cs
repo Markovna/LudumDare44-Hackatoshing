@@ -31,6 +31,8 @@ public class AudioController : MonoBehaviour
         AudioSource source = m_AudioSourcePool.GetAudioSource(clip.length);
         source.clip = clip;
         source.outputAudioMixerGroup = m_Mixer;
+        source.loop = false;
+        source.playOnAwake = false;
         source.Play();
     }
 }

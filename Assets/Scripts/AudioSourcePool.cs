@@ -55,6 +55,8 @@ public class AudioSourcePool : MonoBehaviour
 
     public void DestroySource(AudioSource _Source)
     {
+        _Source.Stop();
+        _Source.clip = null;
         m_Pool.Add(_Source);
     }
 

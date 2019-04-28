@@ -9,28 +9,52 @@ public class GameController : MonoBehaviour
     [SerializeField] AudioController m_AudioController;
     [SerializeField] TimerController m_TimerController;
     [SerializeField] GameObject m_UI;
+    [SerializeField] Animator m_Animator;
 
-    Game m_Game;
+    int m_TotalTicks;
+
+    Round m_Round;
 
     public void StartGame()
     {
-        m_Game = new Game(RythmsStore.Instance.GetRythm(), m_AudioController, m_TimerController);
-        m_Game.Start();
-
+        m_Animator.Play("Default");
         m_UI.SetActive(true);
+
+        m_Round = new Round(RythmsStore.Instance.GetRythm(), m_AudioController);
+        m_Round.Start();
+    }
+
+    public void NextRound()
+    {
+        m_Animator.Play("Continue");
+        m_Round = new Round(RythmsStore.Instance.GetRythm(), m_AudioController);
+        m_Round.Start();
     }
 
     public void StopGame()
     {
-        if (m_Game != null)
-            m_Game.Start();
+        if (m_Round != null)
+            m_Round.Stop();
 
         m_UI.SetActive(false);
     }
 
     void Update()
     {
-        if (m_Game != null)
-            m_Game.Update();
+        if (m_Round != null && !m_Round.Finished)
+        {
+            m_Round.Update();
+
+            m_TimerController.SetTime(TimeSpan.FromSeconds(m_TotalTicks + m_Round.TotalTicks));
+
+            if (m_Round.Finished)
+            {
+                m_TotalTicks += m_Round.TotalTicks;
+                m_Round.Stop();
+                m_Animator.Play("Congrats");
+
+                m_Round = null;
+            }
+        }
     }
 }

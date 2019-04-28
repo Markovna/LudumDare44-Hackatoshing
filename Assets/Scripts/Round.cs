@@ -2,14 +2,30 @@
 using UnityEngine;
 
 [Serializable]
-public class Game
+public class Round
 {
     AudioController m_AudioController;
-    TimerController m_TimerController;
     RythmInfo m_Rythm;
 
     float m_StartTime = -1f;
     int m_Ticks = -1;
+    float m_SoundOffset = .3f;
+
+    public bool Finished
+    {
+        get
+        {
+            return m_Ticks == m_Rythm.Count;
+        }
+    }
+
+    public int TotalTicks
+    {
+        get
+        {
+            return m_Ticks;
+        }
+    }
 
     float CurrentTime
     {
@@ -19,15 +35,13 @@ public class Game
         }
     }
 
-    public Game(
+    public Round(
            RythmInfo _Rythm,
-           AudioController _AudioController,
-           TimerController _TimerController
+           AudioController _AudioController
         )
     {
         m_Rythm = _Rythm;
         m_AudioController = _AudioController;
-        m_TimerController = _TimerController;
     }
 
     public void Start()
@@ -39,7 +53,6 @@ public class Game
     public void Update()
     {
         int ticks = m_Rythm.ToTicks(CurrentTime);
-        m_TimerController.SetTime(TimeSpan.FromSeconds(ticks));
 
         if (ticks != m_Ticks)
             m_AudioController.PlayTick();

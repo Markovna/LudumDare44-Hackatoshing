@@ -6,19 +6,20 @@ using System;
 
 public class TimerController : MonoBehaviour
 {
-    [SerializeField] Text m_SecondsText;
-    [SerializeField] Text m_MinutesText;
-    [SerializeField] Text m_HoursText;
+    [SerializeField] TimerSection m_Hours;
+    [SerializeField] TimerSection m_Minutes;
+    [SerializeField] TimerSection m_Seconds;
 
-    [SerializeField] Text m_SecondsLabel;
-    [SerializeField] Text m_MinutesLabel;
-    [SerializeField] Text m_HoursLabel;
+    [SerializeField] Animator m_Animator;
+
+    bool m_MinutesShown;
+    bool m_HoursShown;
 
     private void Awake()
     {
-        m_SecondsText.text = "";
-        m_MinutesText.text = "";
-        m_HoursText.text = "";
+        m_Hours.Hide();
+        m_Minutes.Hide();
+        m_Seconds.Hide();
     }
 
     public void SetTime(TimeSpan _Time)
@@ -27,12 +28,44 @@ public class TimerController : MonoBehaviour
         int minutes = _Time.Minutes;
         int hours = _Time.Hours;
 
-        m_SecondsText.text = seconds.ToString("00");
-        m_MinutesText.text = minutes > 0 || hours > 0 ? minutes.ToString("00") : "";
-        m_HoursText.text = hours > 0 ? hours.ToString("00") : "";
+        m_Seconds.Set(seconds);
 
-        m_SecondsLabel.gameObject.SetActive(!string.IsNullOrEmpty(m_SecondsText.text));
-        m_MinutesLabel.gameObject.SetActive(!string.IsNullOrEmpty(m_MinutesText.text));
-        m_HoursLabel.gameObject.SetActive(!string.IsNullOrEmpty(m_HoursText.text));
+        bool showMinutes = minutes > 0 || hours > 0;
+        bool showHours = hours > 0;
+
+        if (showMinutes)
+            m_Minutes.Set(minutes);
+        else
+            m_Minutes.Hide();
+
+        if (showHours)
+            m_Hours.Set(hours);
+        else
+            m_Hours.Hide();
+
+        if (showHours != m_HoursShown || showMinutes != m_MinutesShown)
+        {
+            float val = showHours ? 1f : (showMinutes ? .5f : 0f);
+            StartCoroutine(Animate(m_Animator.GetFloat("Blend"), val, .5f));
+        }
+
+        m_MinutesShown = showMinutes;
+        m_HoursShown = showHours;
+    }
+
+    IEnumerator Animate(float _From, float _To, float _Duration)
+    {
+        float start = Time.time;
+        float curr = 0f;
+        while(curr < _Duration)
+        {
+            float phase = curr / _Duration;
+            m_Animator.SetFloat("Blend", Mathf.Lerp(_From, _To, phase));
+
+            yield return null;
+            curr = Time.time - start;
+        }
+
+        m_Animator.SetFloat("Blend", _To);
     }
 }
