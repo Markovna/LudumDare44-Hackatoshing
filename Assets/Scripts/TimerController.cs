@@ -27,9 +27,9 @@ public class TimerController : MonoBehaviour
         int minutes = _Time.Minutes;
         int hours = _Time.Hours;
 
-        m_SecondsText.text = seconds.ToString();
-        m_MinutesText.text = minutes > 0 || hours > 0 ? minutes.ToString() : "";
-        m_HoursText.text = hours > 0 ? hours.ToString() : "";
+        m_SecondsText.text = seconds.ToString("00");
+        m_MinutesText.text = minutes > 0 || hours > 0 ? minutes.ToString("00") : "";
+        m_HoursText.text = hours > 0 ? hours.ToString("00") : "";
 
         m_SecondsLabel.gameObject.SetActive(!string.IsNullOrEmpty(m_SecondsText.text));
         m_MinutesLabel.gameObject.SetActive(!string.IsNullOrEmpty(m_MinutesText.text));

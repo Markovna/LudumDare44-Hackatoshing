@@ -45,7 +45,7 @@ public class GameController : MonoBehaviour
         TimeSpan time = TimeSpan.FromSeconds(current* m_Scale);
 
         int sec = time.Seconds;
-        if (sec > m_LastSeconds)
+        if (sec != m_LastSeconds)
             m_AudioController.PlayHit();
 
         m_LastSeconds = sec;

@@ -1505,12 +1505,6 @@ MonoBehaviour:
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1985308836 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5904406674008811258, guid: 2e1b23bbfd61047dca71e93fcf6941db,
-    type: 3}
-  m_PrefabInstance: {fileID: 1537748722743464760}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2091158082
 GameObject:
   m_ObjectHideFlags: 0
@@ -1529,7 +1523,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2091158083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1607,11 +1601,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 515048162111098719, guid: 2e1b23bbfd61047dca71e93fcf6941db,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4671833467110881639, guid: 2e1b23bbfd61047dca71e93fcf6941db,
         type: 3}
@@ -1720,58 +1709,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 503007101716315343, guid: 2e1b23bbfd61047dca71e93fcf6941db,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 503007101716315343, guid: 2e1b23bbfd61047dca71e93fcf6941db,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 503007101716315343, guid: 2e1b23bbfd61047dca71e93fcf6941db,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 503007101716315343, guid: 2e1b23bbfd61047dca71e93fcf6941db,
-        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2091158085}
     - target: {fileID: 503007101716315343, guid: 2e1b23bbfd61047dca71e93fcf6941db,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 503007101716315343, guid: 2e1b23bbfd61047dca71e93fcf6941db,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 503007101716315343, guid: 2e1b23bbfd61047dca71e93fcf6941db,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 503007101716315343, guid: 2e1b23bbfd61047dca71e93fcf6941db,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 503007101716315343, guid: 2e1b23bbfd61047dca71e93fcf6941db,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1985308836}
-    - target: {fileID: 503007101716315343, guid: 2e1b23bbfd61047dca71e93fcf6941db,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 503007101716315343, guid: 2e1b23bbfd61047dca71e93fcf6941db,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2091158082}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e1b23bbfd61047dca71e93fcf6941db, type: 3}
