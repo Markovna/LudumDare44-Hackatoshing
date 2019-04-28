@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class AudioStore : ScriptableObject
 {
     [SerializeField] List<AudioClip> m_BackgroudClips;
-    [SerializeField]AudioClip m_HitClip;
+    [SerializeField] AudioClip m_HitClip;
 
     public AudioClip GetRandomBackground()
     {

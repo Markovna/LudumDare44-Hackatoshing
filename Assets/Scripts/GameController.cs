@@ -9,47 +9,28 @@ public class GameController : MonoBehaviour
     [SerializeField] AudioController m_AudioController;
     [SerializeField] TimerController m_TimerController;
     [SerializeField] GameObject m_UI;
-    [SerializeField] float m_Seconds = 30f;
-    [SerializeField] float m_RealSeconds = 15f;
 
-    float m_StartTime = -1f;
-    float m_Scale;
-
-    int m_LastSeconds = -1;
+    Game m_Game;
 
     public void StartGame()
     {
-        m_StartTime = Time.time;
-        m_Scale = m_Seconds / m_RealSeconds;
+        m_Game = new Game(RythmsStore.Instance.GetRythm(), m_AudioController, m_TimerController);
+        m_Game.Start();
 
         m_UI.SetActive(true);
-
-        m_AudioController.PlayBackground();
     }
 
     public void StopGame()
     {
-        m_StartTime = -1;
+        if (m_Game != null)
+            m_Game.Start();
 
         m_UI.SetActive(false);
-
-        m_AudioController.StopBackground();
     }
 
     void Update()
     {
-        if (m_StartTime < 0)
-            return;
-
-        float current = Time.time - m_StartTime;
-        TimeSpan time = TimeSpan.FromSeconds(current* m_Scale);
-
-        int sec = time.Seconds;
-        if (sec != m_LastSeconds)
-            m_AudioController.PlayHit();
-
-        m_LastSeconds = sec;
-
-        m_TimerController.SetTime(time);
+        if (m_Game != null)
+            m_Game.Update();
     }
 }

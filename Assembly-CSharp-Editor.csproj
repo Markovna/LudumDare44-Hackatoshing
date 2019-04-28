@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Editor\AudioClipUtility.cs" />
+    <Compile Include="Assets\Scripts\Editor\EditorUtility.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/kamila/Documents/GitHub/LudumDare44-Hackatoshing/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
