@@ -22,8 +22,7 @@ public class GameController : MonoBehaviour
     {
         m_UI.SetActive(true);
 
-        m_Animator.Play("Default");
-        m_Animator.Update(0f);
+        Play("Default");
 
         m_TimerController.Reset();
 
@@ -32,8 +31,7 @@ public class GameController : MonoBehaviour
 
     public void NextRound()
     {
-        m_Animator.Play("Continue");
-        m_Animator.Update(0f);
+        Play("Continue");
 
         StartRound();
     }
@@ -62,12 +60,30 @@ public class GameController : MonoBehaviour
         m_Coninue.gameObject.SetActive(true);
         m_Exit.gameObject.SetActive(true);
 
-        m_Animator.Play("Default");
-        m_Animator.Update(0f);
+        Play("Enough");
+
+        m_TimerController.Reset();
+    }
+
+    public void Exit()
+    {
+        if (m_Round != null)
+            m_Round.Stop();
 
         m_TimerController.Reset();
 
         m_UI.SetActive(false);
+    }
+
+    public void ShowCredits()
+    {
+        Play("Credits");
+    }
+
+    void Play(string _State)
+    {
+        m_Animator.Play(_State);
+        m_Animator.Update(0f);
     }
 
     void Update()
