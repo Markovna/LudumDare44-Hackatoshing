@@ -25,32 +25,30 @@ public class GameController : MonoBehaviour
         m_Animator.Play("Default");
         m_Animator.Update(0f);
 
-        m_TimerController.Hide();
+        m_TimerController.Reset();
+
+        StartRound();
+    }
+
+    public void NextRound()
+    {
+        m_Animator.Play("Continue");
+        m_Animator.Update(0f);
+
+        StartRound();
+    }
+
+    void StartRound()
+    {
+        m_Coninue.gameObject.SetActive(false);
+        m_Exit.gameObject.SetActive(false);
+
+        m_TimerController.SetTime(TimeSpan.FromSeconds(m_TotalTicks), true);
 
         m_Round = new Round(
                 GameAudioSettings.Instance.GetRythm(PlayerPreferences.DifficultyLevel),
                 GameAudioSettings.Instance.GetBackground(PlayerPreferences.DifficultyLevel),
                 GameAudioSettings.Instance.GetSample(),
-                m_AudioController
-            );
-        m_Round.Start();
-
-        m_Coninue.gameObject.SetActive(false);
-        m_Exit.gameObject.SetActive(false);
-    }
-
-    public void NextRound()
-    {
-        m_Coninue.gameObject.SetActive(false);
-        m_Exit.gameObject.SetActive(false);
-
-        m_Animator.Play("Continue");
-        m_Animator.Update(0f);
-
-        m_Round = new Round(
-                GameAudioSettings.Instance.GetRythm(PlayerPreferences.DifficultyLevel),
-                GameAudioSettings.Instance.GetBackground(PlayerPreferences.DifficultyLevel),
-                GameAudioSettings.Instance.GetSample(), 
                 m_AudioController
                 );
         m_Round.Start();
@@ -67,7 +65,7 @@ public class GameController : MonoBehaviour
         m_Animator.Play("Default");
         m_Animator.Update(0f);
 
-        m_TimerController.Hide();
+        m_TimerController.Reset();
 
         m_UI.SetActive(false);
     }

@@ -59,16 +59,10 @@ MonoBehaviour:
   - Rhythms:
     - {fileID: -5193185425866746645}
     Backgrounds:
-    - {fileID: 8300000, guid: 99ad10b03c181493c86c070f7df06a0d, type: 3}
-    - {fileID: 8300000, guid: 0390c364618364186843bc37aaccbdf3, type: 3}
-    - {fileID: 8300000, guid: 160b65133a8fc4975b7fe155089a3bed, type: 3}
-    - {fileID: 8300000, guid: 6e095e89007a841cab9eddbd38d1c598, type: 3}
-  - Rhythms: []
-    Backgrounds:
-    - {fileID: 8300000, guid: 914bf9a87621d4e319a86c7a8fdb46f0, type: 3}
-    - {fileID: 8300000, guid: 5546537439d564bd0ac650bd02727bc2, type: 3}
-    - {fileID: 8300000, guid: e832d8275386d4040b325e51d8bfe523, type: 3}
-    - {fileID: 8300000, guid: a98482081c33048f6be6149800c3f21c, type: 3}
+    - {fileID: 8300000, guid: 095f2abae6cca4978b6ab2e125487380, type: 3}
+    - {fileID: 8300000, guid: 4b32de7ebbeed45a495c976b8ebca86c, type: 3}
+    - {fileID: 8300000, guid: 84be740bd8cd94bcd8baa0871a9efba0, type: 3}
+    - {fileID: 8300000, guid: c4d47360375d842a68cc4056dfec3033, type: 3}
   m_Samples:
   - {fileID: 8300000, guid: 41a5e652ddd304e25989a53b289416ff, type: 3}
   - {fileID: 8300000, guid: cf564f881db9c46cabf4b98419013514, type: 3}

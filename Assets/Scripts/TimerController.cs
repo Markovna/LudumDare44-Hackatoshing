@@ -17,12 +17,10 @@ public class TimerController : MonoBehaviour
 
     private void Awake()
     {
-        m_Hours.Hide();
-        m_Minutes.Hide();
-        m_Seconds.Hide();
+        Reset();
     }
 
-    public void Hide()
+    public void Reset()
     {
         m_MinutesShown = false;
         m_HoursShown = false;
@@ -32,7 +30,7 @@ public class TimerController : MonoBehaviour
         m_Seconds.Reset();
     }
 
-    public void SetTime(TimeSpan _Time)
+    public void SetTime(TimeSpan _Time, bool _Instant = false)
     {
         int seconds = _Time.Seconds;
         int minutes = _Time.Minutes;
@@ -56,7 +54,10 @@ public class TimerController : MonoBehaviour
         if (showHours != m_HoursShown || showMinutes != m_MinutesShown)
         {
             float val = showHours ? 1f : (showMinutes ? .5f : 0f);
-            StartCoroutine(Animate(m_Animator.GetFloat("Blend"), val, .5f));
+            if (!_Instant)
+                StartCoroutine(Animate(m_Animator.GetFloat("Blend"), val, .5f));
+            else
+                m_Animator.SetFloat("Blend", val);
         }
 
         m_MinutesShown = showMinutes;

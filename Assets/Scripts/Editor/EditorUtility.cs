@@ -3,10 +3,10 @@ using UnityEditor;
 
 public static class EditorUtility
 {
-    [MenuItem("Window/Rythms Store")]
+    [MenuItem("Window/GameAudioSettings")]
     static void OpenRythmsStore()
     {
-        Selection.activeInstanceID = RythmsStore.Instance.GetInstanceID();
+        Selection.activeInstanceID = GameAudioSettings.Instance.GetInstanceID();
     }
 
     [MenuItem("Assets/Add to GameAudioSettings/Background/Level Normal")]
