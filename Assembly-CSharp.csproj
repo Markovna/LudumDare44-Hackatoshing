@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\Round.cs" />
     <Compile Include="Assets\Scripts\RythmInfo.cs" />
     <Compile Include="Assets\Scripts\RythmsStore.cs" />
+    <Compile Include="Assets\Scripts\StateListBehaviour.cs" />
     <Compile Include="Assets\Scripts\TimerController.cs" />
     <Compile Include="Assets\Scripts\TimerSection.cs" />
     <Compile Include="Assets\Scripts\UIOptionsController.cs" />

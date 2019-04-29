@@ -3,6 +3,12 @@ using UnityEngine;
 
 public static class PlayerPreferences
 {
+    const string MUSIC_VOLUME_KEY = "MUSIC_VOLUME";
+    const float MUSIC_VOLUME_DEFAULT = .8f;
+
+    const string SOUNDS_VOLUME_KEY = "SOUNDS_VOLUME";
+    const float SOUNDS_VOLUME_DEFAULT = .8f;
+
     const string DIFFICULTY_KEY = "DIFFICULTY";
     const int DIFFICULTY_DEFAULT = 0;
 
@@ -15,73 +21,71 @@ public static class PlayerPreferences
     const string MOUSE_KEY = "MOUSE";
     const MouseOptions MOUSE_DEFAULT = MouseOptions.LBM;
 
+    public static float SoundsVolume
+    {
+        get { return GetFloat(SOUNDS_VOLUME_KEY, SOUNDS_VOLUME_DEFAULT); }
+        set { SetFloat(SOUNDS_VOLUME_KEY, value); }
+    }
+
+    public static float MusicVolume
+    {
+        get { return GetFloat(MUSIC_VOLUME_KEY, MUSIC_VOLUME_DEFAULT);  }
+        set { SetFloat(MUSIC_VOLUME_KEY, value); }
+    }
+
     public static int DifficultyLevel
     {
-        get
-        {
-            if (!PlayerPrefs.HasKey(DIFFICULTY_KEY))
-            {
-                PlayerPrefs.SetInt(DIFFICULTY_KEY, DIFFICULTY_DEFAULT);
-                return DIFFICULTY_DEFAULT;
-            }
-            return PlayerPrefs.GetInt(DIFFICULTY_KEY, DIFFICULTY_DEFAULT);
-        }
-        set
-        {
-            PlayerPrefs.SetInt(DIFFICULTY_KEY, value);
-        }
+        get { return GetInt(DIFFICULTY_KEY, DIFFICULTY_DEFAULT); }
+        set { SetInt(DIFFICULTY_KEY, value); }
     }
 
     public static int GraphicsLevel
     {
-        get
-        {
-            if (!PlayerPrefs.HasKey(GRAPHICS_KEY))
-            {
-                PlayerPrefs.SetInt(GRAPHICS_KEY, GRAPHICS_DEFAULT);
-                return GRAPHICS_DEFAULT;
-            }
-            return PlayerPrefs.GetInt(GRAPHICS_KEY, GRAPHICS_DEFAULT);
-        }
-        set
-        {
-            PlayerPrefs.SetInt(GRAPHICS_KEY, value);
-        }
+        get { return GetInt(GRAPHICS_KEY, GRAPHICS_DEFAULT); }
+        set { SetInt(GRAPHICS_KEY, value); }
     }
 
     public static KeyboardOptions KeyboardOptions
     {
-        get
-        {
-            if (!PlayerPrefs.HasKey(KEYBOARD_KEY))
-            {
-                PlayerPrefs.SetInt(KEYBOARD_KEY, (int) KEYBOARD_DEFAULT);
-                return KEYBOARD_DEFAULT;
-            }
-            return (KeyboardOptions) PlayerPrefs.GetInt(KEYBOARD_KEY, (int) KEYBOARD_DEFAULT);
-        }
-        set
-        {
-            PlayerPrefs.SetInt(KEYBOARD_KEY, (int) value);
-        }
+        get { return (KeyboardOptions) GetInt(KEYBOARD_KEY, (int) KEYBOARD_DEFAULT); }
+        set { SetInt(KEYBOARD_KEY, (int) value); }
     }
 
 
     public static MouseOptions MouseOptions
     {
-        get
+        get { return (MouseOptions)GetInt(MOUSE_KEY, (int)MOUSE_DEFAULT); }
+        set { SetInt(MOUSE_KEY, (int)value); }
+    }
+
+    static int GetInt(string _Key, int _Default)
+    {
+        if (!PlayerPrefs.HasKey(_Key))
         {
-            if (!PlayerPrefs.HasKey(MOUSE_KEY))
-            {
-                PlayerPrefs.SetInt(MOUSE_KEY, (int)MOUSE_DEFAULT);
-                return MOUSE_DEFAULT;
-            }
-            return (MouseOptions) PlayerPrefs.GetInt(MOUSE_KEY, (int)MOUSE_DEFAULT);
+            PlayerPrefs.SetInt(_Key, _Default);
+            return _Default;
         }
-        set
+        return PlayerPrefs.GetInt(_Key, _Default);
+    }
+
+    static float GetFloat(string _Key, float _Default)
+    {
+        if (!PlayerPrefs.HasKey(_Key))
         {
-            PlayerPrefs.SetInt(MOUSE_KEY, (int) value);
+            PlayerPrefs.SetFloat(_Key, _Default);
+            return _Default;
         }
+        return PlayerPrefs.GetFloat(_Key, _Default);
+    }
+
+    static void SetInt(string _Key, int _Value)
+    {
+        PlayerPrefs.SetInt(_Key, _Value);
+    }
+
+    static void SetFloat(string _Key, float _Value)
+    {
+        PlayerPrefs.SetFloat(_Key, _Value);
     }
 }
 

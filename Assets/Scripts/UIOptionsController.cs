@@ -11,7 +11,6 @@ public class UIOptionsController : MonoBehaviour
     [Header("Difficulty")]
     [SerializeField] Text m_DifficultyLow;
     [SerializeField] Text m_DifficultyNormal;
-    [SerializeField] Text m_DifficultyHigh;
     [SerializeField] GameObject m_DifficultyMenu;
 
     [Header("Graphics")]
@@ -20,6 +19,11 @@ public class UIOptionsController : MonoBehaviour
     [SerializeField] Text m_GraphicsHigh;
     [SerializeField] Text m_GraphicsUltra;
     [SerializeField] GameObject m_GraphicsMenu;
+
+    [Header("Sound")]
+    [SerializeField] Slider m_MusicSlider;
+    [SerializeField] Slider m_SoundSlider;
+    [SerializeField] GameObject m_SoundMenu;
 
     [Header("Keyboard")]
     [SerializeField] Text m_KeyboardArrows;
@@ -30,6 +34,19 @@ public class UIOptionsController : MonoBehaviour
     [SerializeField] Text m_MouseLeft;
     [SerializeField] Text m_MouseRight;
     [SerializeField] GameObject m_MouseMenu;
+
+    public void CloseOptions()
+    {
+        gameObject.SetActive(false);
+        CloseMenus();
+    }
+
+    public void OpenSound()
+    {
+        UpdateSound();
+
+        OpenMenu(m_SoundMenu);
+    }
 
     public void OpenDifficulty()
     {
@@ -59,6 +76,12 @@ public class UIOptionsController : MonoBehaviour
         OpenMenu(m_MouseMenu);
     }
 
+    void SaveSoundSettings()
+    {
+        PlayerPreferences.MusicVolume = m_MusicSlider.value;
+        PlayerPreferences.SoundsVolume = m_SoundSlider.value;
+    }
+
     public void SetKeyboardOption(int _Option)
     {
         PlayerPreferences.KeyboardOptions = (KeyboardOptions) _Option;
@@ -83,12 +106,33 @@ public class UIOptionsController : MonoBehaviour
         UpdateGraphics();
     }
 
+    void CloseMenus()
+    {
+        OpenMenu(null);
+    }
+
     void OpenMenu(GameObject _Menu)
     {
         m_DifficultyMenu.SetActive(m_DifficultyMenu == _Menu);
         m_GraphicsMenu.SetActive(m_GraphicsMenu == _Menu);
         m_KeyboardMenu.SetActive(m_KeyboardMenu == _Menu);
         m_MouseMenu.SetActive(m_MouseMenu == _Menu);
+
+        bool soundOpened = m_SoundMenu.gameObject.activeSelf;
+        bool showSound = m_SoundMenu == _Menu;
+        if (soundOpened && !showSound)
+            SaveSoundSettings();
+
+        m_SoundMenu.SetActive(showSound);
+    }
+
+    void UpdateSound()
+    {
+        float musicVolume = PlayerPreferences.MusicVolume;
+        float soundVolume = PlayerPreferences.SoundsVolume;
+
+        m_MusicSlider.value = musicVolume;
+        m_SoundSlider.value = soundVolume;
     }
 
     void UpdateDifficulty()
@@ -96,7 +140,6 @@ public class UIOptionsController : MonoBehaviour
         int difficulty = PlayerPreferences.DifficultyLevel;
         m_DifficultyLow.color = difficulty == 0 ? m_HighlightedColor : m_NormalColor;
         m_DifficultyNormal.color = difficulty == 1 ? m_HighlightedColor : m_NormalColor;
-        m_DifficultyHigh.color = difficulty == 2 ? m_HighlightedColor : m_NormalColor;
     }
 
     void UpdateGraphics()
