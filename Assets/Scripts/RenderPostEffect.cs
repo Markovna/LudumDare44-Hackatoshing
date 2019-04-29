@@ -16,6 +16,8 @@ public class RenderPostEffect : MonoBehaviour
     private void Awake()
     {
         m_Instance = this;
+
+        m_Level = PlayerPreferences.GraphicsLevel;
     }
 
     public static void SetGraphicLevel(int _Level)

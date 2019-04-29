@@ -147,8 +147,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PixelateMaterial: {fileID: 2100000, guid: 774a1471606024bdaae60ed4812aef20, type: 2}
-  m_LowQuality: 0.4
-  m_NormalQuality: 1.2
+  m_LowQuality: 0.2
+  m_NormalQuality: 0.4
 --- !u!1 &9053503733047151117
 GameObject:
   m_ObjectHideFlags: 0
