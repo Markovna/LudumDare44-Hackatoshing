@@ -103,6 +103,7 @@ public class UIOptionsController : MonoBehaviour
     public void SetGraphicsLevel(int _Level)
     {
         PlayerPreferences.GraphicsLevel = _Level;
+        RenderPostEffect.SetGraphicLevel(_Level);
         UpdateGraphics();
     }
 
