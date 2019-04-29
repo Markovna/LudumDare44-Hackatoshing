@@ -12,7 +12,7 @@ public class TimerSection
         [SerializeField] Animator m_Animator;
         [SerializeField] Text m_Text;
 
-        List<string> m_States = new List<string> { "N_Splash_" };
+        List<string> m_States = new List<string> { "N_Splash_", "N_Rotate_H_CCW_", "N_Rotate_H_CW_" };
 
         public void Show(int _Value)
         {
