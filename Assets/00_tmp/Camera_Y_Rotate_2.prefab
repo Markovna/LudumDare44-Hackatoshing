@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b4d1f070334b4ccb8b31ba1eb7b67d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RangeX: 8
-  m_RangeY: 8
+  m_RangeX: -8
+  m_RangeY: -8
   m_BaseRotationX: {x: -30, y: 0, z: 0}
   m_BaseRotationY: {x: 0, y: -20, z: 0}
   m_TransormX: {fileID: 1753976132541038000}
