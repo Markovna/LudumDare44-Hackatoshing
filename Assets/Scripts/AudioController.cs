@@ -27,7 +27,7 @@ public class AudioController : MonoBehaviour
         m_Background.clip = _Clip;
         m_Background.outputAudioMixerGroup = m_Mixer;
         m_Background.volume = PlayerPreferences.MusicVolume;
-        m_Background.loop = true;
+        m_Background.loop = false;
         m_Background.Play();
     }
 

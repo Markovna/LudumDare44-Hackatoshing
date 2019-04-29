@@ -11,14 +11,13 @@ public class Round
     AudioClip m_Sample;
 
     float m_StartTime = -1f;
-    int m_Ticks = -1;
-    float m_SoundOffset = .3f;
+    int m_Ticks = 0;
 
     public bool Finished
     {
         get
         {
-            return m_Ticks == m_Rythm.Count;
+            return CurrentTime >= m_Rythm.Length && TotalTicks == m_Rythm.Count;
         }
     }
 

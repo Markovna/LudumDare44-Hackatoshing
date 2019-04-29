@@ -55,7 +55,7 @@ public class TimerController : MonoBehaviour
         {
             float val = showHours ? 1f : (showMinutes ? .5f : 0f);
             if (!_Instant)
-                StartCoroutine(Animate(m_Animator.GetFloat("Blend"), val, .5f));
+                StartCoroutine(Animate(m_Animator.GetFloat("Blend"), val, .15f));
             else
                 m_Animator.SetFloat("Blend", val);
         }
