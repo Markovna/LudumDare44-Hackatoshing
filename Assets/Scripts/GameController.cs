@@ -33,13 +33,31 @@ public class GameController : MonoBehaviour
     {
         Play("Continue");
 
-        StartRound();
+        Delay(.5f, StartRound);
+    }
+
+    void Delay(float _Delay, Action _Action)
+    {
+        StartCoroutine(DelayCoroutine(_Delay, _Action));
+    }
+
+    IEnumerator DelayCoroutine(float _Delay, Action _Action)
+    {
+        yield return new WaitForSeconds(_Delay);
+
+        if (_Action != null)
+            _Action();
+    }
+
+    void ShowButtons(bool _Show)
+    {
+        m_Coninue.gameObject.SetActive(_Show);
+        m_Exit.gameObject.SetActive(_Show);
     }
 
     void StartRound()
     {
-        m_Coninue.gameObject.SetActive(false);
-        m_Exit.gameObject.SetActive(false);
+        ShowButtons(false);
 
         m_TimerController.SetTime(TimeSpan.FromSeconds(m_TotalTicks), true);
 
@@ -57,12 +75,9 @@ public class GameController : MonoBehaviour
         if (m_Round != null)
             m_Round.Stop();
 
-        m_Coninue.gameObject.SetActive(true);
-        m_Exit.gameObject.SetActive(true);
+        ShowButtons(true);
 
         Play("Enough");
-
-        m_TimerController.Reset();
     }
 
     public void Exit()
@@ -88,7 +103,7 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
-        if (m_Round != null && !m_Round.Finished)
+        if (m_Round != null)
         {
             m_Round.Update();
 
@@ -99,7 +114,7 @@ public class GameController : MonoBehaviour
                 m_TotalTicks += m_Round.TotalTicks;
                 m_Round.Stop();
 
-                m_Animator.Play("Congrats");
+                Delay(.5f, () => m_Animator.Play("Congrats"));
 
                 m_Round = null;
             }

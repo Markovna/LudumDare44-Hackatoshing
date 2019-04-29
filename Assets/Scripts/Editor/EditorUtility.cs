@@ -63,8 +63,8 @@ public static class EditorUtility
 
     public static void AddToGameAudioSettings(AudioClip _Clip, int _Level, bool _ReplaceSameName = true)
     {
-        SerializedObject rythmStoreObj = new SerializedObject(GameAudioSettings.Instance);
-        SerializedProperty levels = rythmStoreObj.FindProperty("m_Levels");
+        SerializedObject audioSettingsObj = new SerializedObject(GameAudioSettings.Instance);
+        SerializedProperty levels = audioSettingsObj.FindProperty("m_Levels");
         SerializedProperty prop;
         if (levels.arraySize < _Level)
             prop = levels.GetArrayElementAtIndex(_Level).FindPropertyRelative("Backgrounds");
@@ -96,7 +96,7 @@ public static class EditorUtility
         }
 
 
-        rythmStoreObj.ApplyModifiedProperties();
+        audioSettingsObj.ApplyModifiedProperties();
     }
 
     public static void AddToGameAudioSettingsSamples(AudioClip _Clip, bool _ReplaceSameName = true)
@@ -137,7 +137,7 @@ public static class EditorUtility
         SerializedObject rythmStoreObj = new SerializedObject(GameAudioSettings.Instance);
         SerializedProperty levels = rythmStoreObj.FindProperty("m_Levels");
         SerializedProperty prop;
-        if (levels.arraySize < _Level)
+        if (_Level < levels.arraySize)
             prop = levels.GetArrayElementAtIndex(_Level).FindPropertyRelative("Rhythms");
         else
         {
@@ -156,6 +156,7 @@ public static class EditorUtility
                     Object.DestroyImmediate(element.objectReferenceValue, true);
                     element.objectReferenceValue = _Rythm;
                     replaced = true;
+                    break;
                 }
             }
         }

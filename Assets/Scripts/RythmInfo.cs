@@ -6,6 +6,7 @@ using System.Linq;
 public class RythmInfo : ScriptableObject, ISerializationCallbackReceiver
 {
     [SerializeField] List<float> m_Ticks;
+    [SerializeField] float m_Length = 15f;
 
     List<float> m_SortedTicks;
 
@@ -15,6 +16,11 @@ public class RythmInfo : ScriptableObject, ISerializationCallbackReceiver
         { 
             return m_Ticks.Count;
         }
+    }
+
+    public float Length
+    {
+        get { return m_Length; }
     }
 
     public void OnAfterDeserialize()

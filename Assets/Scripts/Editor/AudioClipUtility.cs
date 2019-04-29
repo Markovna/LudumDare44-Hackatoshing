@@ -63,6 +63,7 @@ public static class AudioClipUtility
                             }
                         }
 
+                        rythmObject.FindProperty("m_Length").floatValue = clip.length;
                         rythmObject.ApplyModifiedProperties();
                         //string ap = AssetDatabase.GetAssetPath(clip);
                         //int slash = ap.LastIndexOf("/");
