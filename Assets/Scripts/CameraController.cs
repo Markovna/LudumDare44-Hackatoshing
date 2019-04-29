@@ -7,6 +7,9 @@ public class CameraController : MonoBehaviour
     [SerializeField] float m_RangeX;
     [SerializeField] float m_RangeY;
 
+    [SerializeField] Vector3 m_BaseRotationX;
+    [SerializeField] Vector3 m_BaseRotationY;
+
     [SerializeField] Transform m_TransormX;
     [SerializeField] Transform m_TransormY;
 
@@ -22,7 +25,7 @@ public class CameraController : MonoBehaviour
 
     private void LateUpdate()
     {
-        m_TransormX.localEulerAngles = new Vector3(m_MousePosition.y * m_RangeY, 0f, 0f);
-        m_TransormY.localEulerAngles = new Vector3(0f, m_MousePosition.x * m_RangeX, 0f);
+        m_TransormX.localRotation = Quaternion.Euler(m_BaseRotationX) * Quaternion.AngleAxis(m_MousePosition.y * m_RangeX, Vector3.right);
+        m_TransormY.localRotation = Quaternion.Euler(m_BaseRotationY) * Quaternion.AngleAxis(m_MousePosition.x * m_RangeY, Vector3.up);
     }
 }
