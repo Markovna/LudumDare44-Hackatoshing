@@ -1,5 +1,153 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8938192139464678785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3c85d776af4d4951b6e70c8bdccc747, type: 3}
+  m_Name: LD44_rhythm_7_hard
+  m_EditorClassIdentifier: 
+  m_Ticks:
+  - 0.8333333
+  - 1
+  - 1.1666666
+  - 1.3333334
+  - 1.5
+  - 1.6666666
+  - 1.8333334
+  - 3.5
+  - 5.1666665
+  - 5.3333335
+  - 5.5
+  - 5.6666665
+  - 5.8333335
+  - 6
+  - 6.1666665
+  - 7.5
+  - 8.833333
+  - 9.166667
+  - 9.5
+  - 9.833333
+  - 11.166667
+  - 11.333333
+  - 11.5
+  - 11.666667
+  - 11.833333
+  - 12
+  - 12.166667
+  - 13.5
+  - 13.833333
+  - 14.833333
+  - 15.166667
+  - 15.5
+  - 15.833333
+  - 17.166666
+  - 17.333334
+  - 18.5
+  - 18.666666
+  - 18.833334
+  - 19
+  - 19.166666
+  - 19.333334
+  - 19.5
+  - 20.833334
+  - 21
+  - 22.166666
+  - 22.333334
+  - 22.5
+  - 22.833334
+  - 23
+  - 23.166666
+  - 24.5
+  - 25.833334
+  - 26.166666
+  - 26.5
+  - 26.833334
+  - 28.166666
+  - 28.5
+  - 28.833334
+  - 29.166666
+  - 29.833334
+  m_Length: 29.983334
+--- !u!114 &-4893968537363382868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3c85d776af4d4951b6e70c8bdccc747, type: 3}
+  m_Name: LD44_rhythm_6_hard
+  m_EditorClassIdentifier: 
+  m_Ticks:
+  - 0.8333333
+  - 1.8333334
+  - 2.6666667
+  - 3.3333333
+  - 3.8333333
+  - 4.1666665
+  - 4.3333335
+  - 4.5
+  - 4.8333335
+  - 5.5
+  - 6.1666665
+  - 6.8333335
+  - 7.3333335
+  - 7.5
+  - 8.166667
+  - 8.666667
+  - 8.833333
+  - 9.5
+  - 9.666667
+  - 9.833333
+  - 10.166667
+  - 10.833333
+  - 11.5
+  - 12.166667
+  - 12.666667
+  - 12.833333
+  - 13.5
+  - 13.666667
+  - 13.833333
+  - 14.166667
+  - 15.166667
+  - 15.333333
+  - 15.5
+  - 16
+  - 16.166666
+  - 16.833334
+  - 17.5
+  - 18
+  - 18.166666
+  - 18.833334
+  - 19.5
+  - 20.166666
+  - 20.333334
+  - 20.5
+  - 20.833334
+  - 21.5
+  - 22.166666
+  - 22.833334
+  - 23.333334
+  - 23.5
+  - 24.166666
+  - 24.666666
+  - 24.816668
+  - 25.333334
+  - 25.5
+  - 26.166666
+  - 27.333334
+  - 27.5
+  - 28.166666
+  - 28.833334
+  m_Length: 29.983334
 --- !u!114 &-4538817583130827464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,6 +222,50 @@ MonoBehaviour:
   - 29.283333
   - 29.816668
   m_Length: 29.983334
+--- !u!114 &-3118370769245169131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3c85d776af4d4951b6e70c8bdccc747, type: 3}
+  m_Name: LD44_rhythm_6_normal
+  m_EditorClassIdentifier: 
+  m_Ticks:
+  - 0.8333333
+  - 1.8333334
+  - 2.6666667
+  - 3.3333333
+  - 3.8333333
+  - 4.1666665
+  - 4.3333335
+  - 4.5
+  - 4.8333335
+  - 5.5
+  - 6.1666665
+  - 6.8333335
+  - 7.3333335
+  - 7.5
+  - 8.166667
+  - 8.666667
+  - 8.833333
+  - 9.5
+  - 9.666667
+  - 9.833333
+  - 10.166667
+  - 10.833333
+  - 11.5
+  - 12.166667
+  - 12.666667
+  - 12.833333
+  - 13.5
+  - 13.666667
+  - 13.833333
+  - 14.166667
+  m_Length: 14.966666
 --- !u!114 &-3068514507496971648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,6 +310,51 @@ MonoBehaviour:
   - 13.15
   - 14.15
   m_Length: 14.983334
+--- !u!114 &-688941858058524298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3c85d776af4d4951b6e70c8bdccc747, type: 3}
+  m_Name: LD44_rhythm_5_normal
+  m_EditorClassIdentifier: 
+  m_Ticks:
+  - 0.8333333
+  - 1.5
+  - 2.1666667
+  - 2.3333333
+  - 2.8333333
+  - 3.5
+  - 4.1666665
+  - 4.8333335
+  - 5
+  - 5.5
+  - 6.1666665
+  - 6.3333335
+  - 6.8333335
+  - 7.5
+  - 7.6666665
+  - 8.166667
+  - 8.833333
+  - 9.166667
+  - 9.333333
+  - 9.5
+  - 10.166667
+  - 10.333333
+  - 10.833333
+  - 11
+  - 11.5
+  - 12.166667
+  - 12.833333
+  - 13
+  - 13.5
+  - 14.166667
+  - 14.983334
+  m_Length: 14.983334
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,25 +369,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Levels:
   - Rhythms:
-    - {fileID: 175975960232349787}
-    - {fileID: -3068514507496971648}
-    - {fileID: 5912841458549858314}
+    - {fileID: 1681404896681548409}
+    - {fileID: -688941858058524298}
+    - {fileID: -3118370769245169131}
+    - {fileID: 8312360234157790342}
     Backgrounds:
     - {fileID: 8300000, guid: c07e65a1abc9fe84e9eff5a9239e047d, type: 3}
     - {fileID: 8300000, guid: b11ae85ef95c91b478fc10d6d06813ad, type: 3}
     - {fileID: 8300000, guid: a7e4bd41a789b5f4e8f06d84cbf7153a, type: 3}
     - {fileID: 8300000, guid: 318f36a680c792a43851cada5cbd4303, type: 3}
   - Rhythms:
-    - {fileID: 4297087791031561086}
-    - {fileID: -4538817583130827464}
-    - {fileID: 5791414810726285503}
+    - {fileID: 1681404896681548409}
+    - {fileID: -688941858058524298}
+    - {fileID: -3118370769245169131}
+    - {fileID: 8312360234157790342}
     Backgrounds:
-    - {fileID: 8300000, guid: b082a811305fddd4888c892bcc8add21, type: 3}
-    - {fileID: 8300000, guid: e60fadd2d9f04a747bf26b58b9dadd8e, type: 3}
-    - {fileID: 8300000, guid: feea8df935258144e901edadc29e6c1c, type: 3}
+    - {fileID: 8300000, guid: c07e65a1abc9fe84e9eff5a9239e047d, type: 3}
+    - {fileID: 8300000, guid: b11ae85ef95c91b478fc10d6d06813ad, type: 3}
+    - {fileID: 8300000, guid: a7e4bd41a789b5f4e8f06d84cbf7153a, type: 3}
+    - {fileID: 8300000, guid: 318f36a680c792a43851cada5cbd4303, type: 3}
     - {fileID: 8300000, guid: 8760053d90c57ed40b7368790dfe358e, type: 3}
+    - {fileID: 8300000, guid: feea8df935258144e901edadc29e6c1c, type: 3}
+    - {fileID: 8300000, guid: e60fadd2d9f04a747bf26b58b9dadd8e, type: 3}
+    - {fileID: 8300000, guid: b082a811305fddd4888c892bcc8add21, type: 3}
   m_Samples:
-  - {fileID: 8300000, guid: 28b15544bed3b654dbd2c69fa7f619d4, type: 3}
   - {fileID: 8300000, guid: 470e5c8c43f7e8b49b7ea591ad759c4b, type: 3}
   - {fileID: 8300000, guid: 398505196fce9594e88299b0493ea58e, type: 3}
   - {fileID: 8300000, guid: cbc73a482d5ed93448511eca96ed60fb, type: 3}
@@ -200,6 +442,125 @@ MonoBehaviour:
   - 14.283334
   - 14.666667
   m_Length: 14.983334
+--- !u!114 &1681404896681548409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3c85d776af4d4951b6e70c8bdccc747, type: 3}
+  m_Name: LD44_rhythm_4_normal
+  m_EditorClassIdentifier: 
+  m_Ticks:
+  - 0.8333333
+  - 1.5
+  - 2.1666667
+  - 2.8333333
+  - 3
+  - 3.1666667
+  - 3.3333333
+  - 3.5
+  - 4.8333335
+  - 5
+  - 5.5
+  - 5.6666665
+  - 5.8333335
+  - 6
+  - 6.1666665
+  - 7.5
+  - 7.6666665
+  - 8.166667
+  - 8.333333
+  - 8.5
+  - 8.666667
+  - 8.833333
+  - 10.166667
+  - 10.333333
+  - 10.5
+  - 11.5
+  - 12.166667
+  - 13.5
+  - 13.666667
+  - 14.166667
+  - 14.833333
+  m_Length: 14.983334
+--- !u!114 &1855943823493517531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3c85d776af4d4951b6e70c8bdccc747, type: 3}
+  m_Name: LD44_rhythm_4_hard
+  m_EditorClassIdentifier: 
+  m_Ticks:
+  - 0.8333333
+  - 1.5
+  - 2.1666667
+  - 2.8333333
+  - 3
+  - 3.1666667
+  - 3.3333333
+  - 3.5
+  - 4.8333335
+  - 5
+  - 5.5
+  - 5.6666665
+  - 5.8333335
+  - 6
+  - 6.1666665
+  - 7.5
+  - 7.6666665
+  - 8.166667
+  - 8.333333
+  - 8.5
+  - 8.666667
+  - 8.833333
+  - 10.166667
+  - 10.333333
+  - 10.5
+  - 11.5
+  - 12.166667
+  - 13.5
+  - 13.666667
+  - 14.166667
+  - 14.833333
+  - 15
+  - 15.5
+  - 15.666667
+  - 15.833333
+  - 16
+  - 16.166666
+  - 17.5
+  - 17.666666
+  - 18.166666
+  - 18.333334
+  - 18.5
+  - 18.666666
+  - 18.833334
+  - 20.166666
+  - 20.333334
+  - 20.5
+  - 21.833334
+  - 22.166666
+  - 23.166666
+  - 23.333334
+  - 23.5
+  - 24.833334
+  - 25
+  - 25.166666
+  - 26.166666
+  - 26.5
+  - 27.5
+  - 28.833334
+  - 29
+  m_Length: 29.983334
 --- !u!114 &4297087791031561086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,6 +634,80 @@ MonoBehaviour:
   - 29.116667
   - 29.35
   - 29.633333
+  m_Length: 29.983334
+--- !u!114 &5160511967714869051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3c85d776af4d4951b6e70c8bdccc747, type: 3}
+  m_Name: LD44_rhythm_5_hard
+  m_EditorClassIdentifier: 
+  m_Ticks:
+  - 0.8333333
+  - 1.5
+  - 2.1666667
+  - 2.3333333
+  - 2.8333333
+  - 3.5
+  - 4.1666665
+  - 4.8333335
+  - 5
+  - 5.5
+  - 6.1666665
+  - 6.3333335
+  - 6.8333335
+  - 7.5
+  - 7.6666665
+  - 8.166667
+  - 8.833333
+  - 9.166667
+  - 9.333333
+  - 9.5
+  - 10.166667
+  - 10.333333
+  - 10.833333
+  - 11
+  - 11.5
+  - 12.166667
+  - 12.833333
+  - 13
+  - 13.5
+  - 14.166667
+  - 14.983334
+  - 15.166667
+  - 15.333333
+  - 15.5
+  - 16.166666
+  - 16.833334
+  - 17.5
+  - 17.666666
+  - 18.166666
+  - 18.833334
+  - 19.5
+  - 20.166666
+  - 20.333334
+  - 20.5
+  - 21.5
+  - 22.166666
+  - 22.833334
+  - 23
+  - 23.5
+  - 23.666666
+  - 24.166666
+  - 24.333334
+  - 24.5
+  - 24.833334
+  - 25
+  - 25.166666
+  - 26.166666
+  - 27.5
+  - 27.683332
+  - 28.833334
   m_Length: 29.983334
 --- !u!114 &5791414810726285503
 MonoBehaviour:
@@ -392,3 +827,47 @@ MonoBehaviour:
   - 14.116667
   - 14.516666
   m_Length: 14.983334
+--- !u!114 &8312360234157790342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3c85d776af4d4951b6e70c8bdccc747, type: 3}
+  m_Name: LD44_rhythm_7_normal
+  m_EditorClassIdentifier: 
+  m_Ticks:
+  - 0.8333333
+  - 1
+  - 1.1666666
+  - 1.3333334
+  - 1.5
+  - 1.6666666
+  - 1.8333334
+  - 3.5
+  - 5.1666665
+  - 5.3333335
+  - 5.5
+  - 5.6666665
+  - 5.8333335
+  - 6
+  - 6.1666665
+  - 7.5
+  - 8.833333
+  - 9.166667
+  - 9.5
+  - 9.833333
+  - 11.166667
+  - 11.333333
+  - 11.5
+  - 11.666667
+  - 11.833333
+  - 12
+  - 12.166667
+  - 13.5
+  - 13.833333
+  - 14.833333
+  m_Length: 14.966666
