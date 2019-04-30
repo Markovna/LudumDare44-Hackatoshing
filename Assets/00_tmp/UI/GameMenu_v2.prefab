@@ -952,7 +952,6 @@ MonoBehaviour:
   m_GraphicsLow: {fileID: 8190835623276005039}
   m_GraphicsNormal: {fileID: 472895495127838416}
   m_GraphicsHigh: {fileID: 4752337100323375651}
-  m_GraphicsUltra: {fileID: 0}
   m_GraphicsMenu: {fileID: 8845076636754107610}
   m_MusicSlider: {fileID: 3877364878702440368}
   m_SoundSlider: {fileID: 6765758070924789257}

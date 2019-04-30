@@ -54,6 +54,9 @@ MonoBehaviour:
   m_Coninue: {fileID: 4665276499702294408}
   m_Exit: {fileID: 2853283535081487651}
   m_CongratsText: {fileID: 2091158087}
+  m_Intro: {fileID: 0}
+  m_IntroAnimator: {fileID: 0}
+  m_Menu: {fileID: 0}
 --- !u!114 &6185522105393230313
 MonoBehaviour:
   m_ObjectHideFlags: 0

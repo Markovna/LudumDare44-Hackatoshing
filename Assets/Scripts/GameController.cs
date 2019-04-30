@@ -17,10 +17,24 @@ public class GameController : MonoBehaviour
     [SerializeField] TextRandomizer m_CongratsText;
     [SerializeField] GameObject m_Intro;
     [SerializeField] Animator m_IntroAnimator;
+    [SerializeField] GameObject m_Menu;
 
     int m_TotalTicks;
     Round m_Round;
     bool m_FirstRound = true;
+
+    private void Awake()
+    {
+        m_Menu.SetActive(false);
+        m_IntroAnimator.Play("Intro_Start_v1");
+        Delay(9f, ShowMenu);
+    }
+
+    void ShowMenu()
+    {
+        m_Intro.SetActive(false);
+        m_Menu.SetActive(true);
+    }
 
     public void StartGame()
     {
