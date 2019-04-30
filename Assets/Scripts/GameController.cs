@@ -14,9 +14,11 @@ public class GameController : MonoBehaviour
     [SerializeField] GameObject m_Coninue;
     [SerializeField] GameObject m_Exit;
 
-    int m_TotalTicks;
+    [SerializeField] TextRandomizer m_CongratsText;
 
+    int m_TotalTicks;
     Round m_Round;
+    bool m_FirstRound = true;
 
     public void StartGame()
     {
@@ -95,6 +97,18 @@ public class GameController : MonoBehaviour
         Play("Credits");
     }
 
+    void ShowConrgrats()
+    {
+        m_Animator.Play("Congrats");
+
+        if (m_FirstRound)
+            m_CongratsText.SetDefaultText();
+        else
+            m_CongratsText.SetRandomText();
+
+        m_FirstRound = false;
+    }
+
     void Play(string _State)
     {
         m_Animator.Play(_State);
@@ -114,7 +128,7 @@ public class GameController : MonoBehaviour
                 m_TotalTicks += m_Round.TotalTicks;
                 m_Round.Stop();
 
-                Delay(.5f, () => m_Animator.Play("Congrats"));
+                Delay(.5f, ShowConrgrats);
 
                 m_Round = null;
             }
