@@ -1566,7 +1566,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -100, y: -170}
+  m_AnchoredPosition: {x: -100, y: -88}
   m_SizeDelta: {x: 160, y: 200}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &1317871277540549881
@@ -1610,14 +1610,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'UI  |  AlejandroZz
+  m_Text: 'UI/UX  |  AlejandroZz
 
     Programming  |  Markovna
 
-    Sound |  dreevna
+    Composer  |  dreevna
 
 
-    Special thanks for being present at the birth of an idea to: E. Mudrenko'
+    Special thanks to E. Mudrenko'
 --- !u!1 &2923981484916585897
 GameObject:
   m_ObjectHideFlags: 0
