@@ -56,6 +56,10 @@ MonoBehaviour:
   m_CongratsText: {fileID: 2091158087}
   m_Intro: {fileID: 0}
   m_IntroAnimator: {fileID: 0}
+<<<<<<< HEAD
+=======
+  m_Menu: {fileID: 0}
+>>>>>>> 5890c81332fffe0373ded912283f50019b1072b2
 --- !u!114 &6185522105393230313
 MonoBehaviour:
   m_ObjectHideFlags: 0
