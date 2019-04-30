@@ -17,7 +17,6 @@ public class UIOptionsController : MonoBehaviour
     [SerializeField] Text m_GraphicsLow;
     [SerializeField] Text m_GraphicsNormal;
     [SerializeField] Text m_GraphicsHigh;
-    [SerializeField] Text m_GraphicsUltra;
     [SerializeField] GameObject m_GraphicsMenu;
 
     [Header("Sound")]
@@ -149,7 +148,6 @@ public class UIOptionsController : MonoBehaviour
         m_GraphicsLow.color = graphic == 0 ? m_HighlightedColor : m_NormalColor;
         m_GraphicsNormal.color = graphic == 1 ? m_HighlightedColor : m_NormalColor;
         m_GraphicsHigh.color = graphic == 2 ? m_HighlightedColor : m_NormalColor;
-        m_GraphicsUltra.color = graphic == 3 ? m_HighlightedColor : m_NormalColor;
     }
 
     void UpdateKeyboard()
