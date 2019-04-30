@@ -15,6 +15,8 @@ public class GameController : MonoBehaviour
     [SerializeField] GameObject m_Exit;
 
     [SerializeField] TextRandomizer m_CongratsText;
+    [SerializeField] GameObject m_Intro;
+    [SerializeField] Animator m_IntroAnimator;
 
     int m_TotalTicks;
     Round m_Round;

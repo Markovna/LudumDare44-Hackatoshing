@@ -82,7 +82,7 @@ public class TimerSection
 
     [SerializeField] AnimationDigit m_LeftDigit;
     [SerializeField] AnimationDigit m_RightDigit;
-    [SerializeField] Text m_Label;
+    [SerializeField] GameObject m_Label;
 
     public void Set(int _Value)
     {
@@ -91,20 +91,20 @@ public class TimerSection
 
         m_LeftDigit.SetValue(leftVal);
         m_RightDigit.SetValue(rightVal);
-        m_Label.gameObject.SetActive(true);
+        m_Label.SetActive(true);
     }
 
     public void Hide()
     {
         m_LeftDigit.Hide();
         m_RightDigit.Hide();
-        m_Label.gameObject.SetActive(false);
+        m_Label.SetActive(false);
     }
 
     public void Reset()
     {
         m_LeftDigit.Reset();
         m_RightDigit.Reset();
-        m_Label.gameObject.SetActive(false);
+        m_Label.SetActive(false);
     }
 }

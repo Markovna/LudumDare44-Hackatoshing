@@ -1205,18 +1205,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1134709455 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6974340314200863545, guid: 3784204f635f145e0a98d293f4577266,
-    type: 3}
-  m_PrefabInstance: {fileID: 6185522106410646445}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1282429654
 GameObject:
   m_ObjectHideFlags: 0
@@ -1432,40 +1420,18 @@ PrefabInstance:
       objectReference: {fileID: 2091158085}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcc4b5bbdc23ea741a7ca37b7d9a704f, type: 3}
---- !u!1 &2091158082 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6185522105393230319, guid: 3784204f635f145e0a98d293f4577266,
-    type: 3}
-  m_PrefabInstance: {fileID: 6185522106410646445}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2091158085 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6185522105393230312, guid: 3784204f635f145e0a98d293f4577266,
     type: 3}
   m_PrefabInstance: {fileID: 6185522106410646445}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2091158082}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5f97ac26282041ee956c814168c83e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2091158087
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2091158082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 031b8496715424ce8aef485a967a5c16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Text: {fileID: 1134709455}
-  m_Texts:
-  - You have just spent 30 units \nof your life!
-  - If you don't know how to \nwaste your life better - click continue
 --- !u!20 &3341814168227962288 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 3341814168227962288, guid: 126dd0e7aeed6c14781e91489c06b232,
@@ -1484,11 +1450,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game
       objectReference: {fileID: 0}
-    - target: {fileID: 6185522105393230312, guid: 3784204f635f145e0a98d293f4577266,
-        type: 3}
-      propertyPath: m_CongratsText
-      value: 
-      objectReference: {fileID: 2091158087}
     - target: {fileID: 6185522105393230315, guid: 3784204f635f145e0a98d293f4577266,
         type: 3}
       propertyPath: m_LocalPosition.x
