@@ -19,6 +19,8 @@ public class GameController : MonoBehaviour
     [SerializeField] Animator m_IntroAnimator;
     [SerializeField] GameObject m_Menu;
 
+    [SerializeField] TextRandomizer m_IntroText;
+
     int m_TotalTicks;
     Round m_Round;
     bool m_FirstRound = true;
@@ -26,6 +28,7 @@ public class GameController : MonoBehaviour
     private void Awake()
     {
         m_Menu.SetActive(false);
+        m_IntroText.SetRandomText();
         m_IntroAnimator.Play("Intro_Start_v1");
         Delay(9f, ShowMenu);
     }
