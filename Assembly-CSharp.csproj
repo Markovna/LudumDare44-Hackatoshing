@@ -69,13 +69,16 @@
     <Compile Include="Assets\Scripts\GameAudioSettings.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\PlayerPreferences.cs" />
+    <Compile Include="Assets\Scripts\RenderPostEffect.cs" />
     <Compile Include="Assets\Scripts\Round.cs" />
     <Compile Include="Assets\Scripts\RythmInfo.cs" />
     <Compile Include="Assets\Scripts\RythmsStore.cs" />
     <Compile Include="Assets\Scripts\StateListBehaviour.cs" />
+    <Compile Include="Assets\Scripts\TextRandomizer.cs" />
     <Compile Include="Assets\Scripts\TimerController.cs" />
     <Compile Include="Assets\Scripts\TimerSection.cs" />
     <Compile Include="Assets\Scripts\UIOptionsController.cs" />
+    <None Include="Assets\Shaders\LowQualityEffect.shader" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/kamila/Documents/GitHub/LudumDare44-Hackatoshing/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
